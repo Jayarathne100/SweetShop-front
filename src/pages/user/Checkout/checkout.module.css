@@ -1,0 +1,292 @@
+
+.checkoutPage {
+  min-height: 100vh;
+  padding: 50px 20px 70px;
+  background: #f5f7ed;
+  color: #304a36;
+}
+
+.checkoutWrapper {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.pageHeading {
+  margin-bottom: 32px;
+}
+
+.eyebrow {
+  color: #57966a;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.pageHeading h1 {
+  margin: 8px 0;
+  font-size: clamp(32px, 5vw, 44px);
+  color: #2f5038;
+}
+
+.pageHeading p {
+  margin: 0;
+  color: #78877a;
+  line-height: 1.6;
+}
+
+.checkoutGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.9fr);
+  align-items: start;
+  gap: 28px;
+}
+
+.formCard,
+.summaryCard {
+  padding: 30px;
+  background: #fffdf6;
+  border: 1px solid #e0e9d9;
+  border-radius: 18px;
+  box-shadow: 0 8px 30px rgba(48, 74, 54, 0.06);
+}
+
+.formCard h2,
+.summaryCard h2 {
+  margin: 0 0 24px;
+  color: #2f5038;
+  font-size: 23px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.field label {
+  color: #304a36;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.field input,
+.field textarea,
+.field select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 14px;
+  border: 1px solid #dce8d6;
+  border-radius: 10px;
+  outline: none;
+  background: #fffef9;
+  color: #304a36;
+  font: inherit;
+  font-size: 14px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.field input,
+.field select {
+  min-height: 48px;
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.field input:focus,
+.field textarea:focus,
+.field select:focus {
+  border-color: #57966a;
+  box-shadow: 0 0 0 3px rgba(87, 150, 106, 0.15);
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: #95a193;
+}
+
+.cardDemo {
+  margin: 6px 0 24px;
+  padding: 20px;
+  border: 1px solid #dce8d6;
+  border-radius: 14px;
+  background: #f8f9f0;
+}
+
+.cardDemo h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  color: #2f5038;
+}
+
+.demoNotice {
+  margin: 0 0 20px;
+  padding: 12px;
+  border-radius: 8px;
+  background: #e9f1df;
+  color: #456b49;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.cardFieldsRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.placeOrderButton,
+.backButton {
+  width: 100%;
+  min-height: 49px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.placeOrderButton {
+  margin-top: 6px;
+  border: none;
+  background: linear-gradient(135deg, #6eaa79, #3f7c4e);
+  color: #fffdf6;
+  box-shadow: 0 6px 16px rgba(63, 124, 78, 0.16);
+}
+
+.placeOrderButton:hover:not(:disabled) {
+  background: #326a40;
+  transform: translateY(-1px);
+}
+
+.placeOrderButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.backButton {
+  margin-top: 12px;
+  border: 1px solid #d6e3d0;
+  background: #fffdf6;
+  color: #477d54;
+}
+
+.backButton:hover {
+  background: #edf4e7;
+}
+
+.errorMessage {
+  margin-bottom: 20px;
+  padding: 13px 15px;
+  border: 1px solid #edc5bd;
+  border-radius: 9px;
+  background: #fff0eb;
+  color: #a33c30;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.summaryCard {
+  position: sticky;
+  top: 24px;
+}
+
+.orderItems {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.orderItem {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #e4eadf;
+}
+
+.itemDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.itemDetails span {
+  font-size: 14px;
+  font-weight: 700;
+  color: #304a36;
+  overflow-wrap: anywhere;
+}
+
+.itemDetails small {
+  color: #829084;
+  font-size: 12px;
+}
+
+.orderItem strong {
+  flex-shrink: 0;
+  color: #477d54;
+  font-size: 14px;
+}
+
+.totalRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding-top: 22px;
+  font-size: 16px;
+  color: #304a36;
+}
+
+.totalRow strong {
+  color: #3f7c4e;
+  font-size: 21px;
+}
+
+.secureNote {
+  margin: 22px 0 0;
+  padding: 14px;
+  border-radius: 10px;
+  background: #edf4e7;
+  color: #647d65;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+@media (max-width: 800px) {
+  .checkoutGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .summaryCard {
+    position: static;
+  }
+}
+
+@media (max-width: 480px) {
+  .checkoutPage {
+    padding: 30px 14px 45px;
+  }
+
+  .formCard,
+  .summaryCard {
+    padding: 20px;
+    border-radius: 14px;
+  }
+
+  .cardFieldsRow {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .pageHeading {
+    margin-bottom: 24px;
+  }
+}

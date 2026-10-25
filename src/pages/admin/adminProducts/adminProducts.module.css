@@ -1,0 +1,393 @@
+
+/* Main Admin Layout */
+.adminLayout {
+  display: flex;
+  min-height: 100vh;
+  background: #fffaf0;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.mainContent {
+  flex: 1;
+  min-width: 0;
+  padding: 32px;
+  box-sizing: border-box;
+}
+
+/* Page Header */
+.pageHeader {
+  margin-bottom: 28px;
+}
+
+.pageHeader h1 {
+  margin: 0 0 8px;
+  color: #294c3b;
+  font-size: 30px;
+}
+
+.pageHeader p {
+  margin: 0;
+  color: #708575;
+  line-height: 1.6;
+}
+
+/* Form and Product List */
+.formCard,
+.listSection {
+  background: #ffffff;
+  border: 1px solid #dce9dd;
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 28px;
+  box-shadow: 0 4px 18px rgba(48, 72, 61, 0.05);
+}
+
+.formCard h2,
+.listHeader h2 {
+  margin: 0 0 22px;
+  color: #294c3b;
+  font-size: 22px;
+}
+
+/* Product Form */
+.productForm {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.fullWidth {
+  grid-column: 1 / -1;
+}
+
+.formGroup label {
+  color: #405b49;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #d4e3d5;
+  border-radius: 8px;
+  background: #fffdf7;
+  padding: 12px;
+  color: #30483d;
+  font: inherit;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: #65b58e;
+  box-shadow: 0 0 0 3px rgba(130, 201, 167, 0.2);
+}
+
+.formGroup input[type="file"] {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.formGroup small {
+  color: #708575;
+  font-size: 12px;
+}
+
+.formGroup textarea {
+  resize: vertical;
+}
+
+/* Image Preview */
+.previewContainer {
+  margin-top: 12px;
+}
+
+.imagePreview {
+  display: block;
+  width: 180px;
+  max-width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #dce9dd;
+}
+
+.previewContainer p {
+  color: #708575;
+  font-size: 12px;
+}
+
+/* Form Buttons */
+.formActions {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.primaryButton,
+.secondaryButton,
+.editButton,
+.deleteButton {
+  border: none;
+  border-radius: 8px;
+  padding: 11px 17px;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.primaryButton {
+  background: #82c9a7;
+  color: #183e2d;
+}
+
+.primaryButton:hover:not(:disabled) {
+  background: #65b58e;
+  transform: translateY(-1px);
+}
+
+.secondaryButton {
+  background: #e8f2e7;
+  color: #405b49;
+  border: 1px solid #d4e3d5;
+}
+
+.secondaryButton:hover:not(:disabled) {
+  background: #dcecdf;
+}
+
+.primaryButton:disabled,
+.secondaryButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.editButton:hover,
+.deleteButton:hover {
+  opacity: 0.8;
+}
+
+/* Success and Error Messages */
+.errorMessage,
+.successMessage {
+  padding: 13px 16px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.errorMessage {
+  background: #fff0ed;
+  color: #a13b2c;
+  border: 1px solid #f0d1c8;
+}
+
+.successMessage {
+  background: #eaf6eb;
+  color: #286b42;
+  border: 1px solid #cce5d0;
+}
+
+/* Product List Header */
+.listHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.listHeader h2 {
+  margin-bottom: 0;
+}
+
+.listHeader span {
+  color: #708575;
+  font-size: 14px;
+}
+
+/* Product Table */
+.tableWrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.productTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.productTable th,
+.productTable td {
+  padding: 14px 12px;
+  border-bottom: 1px solid #e5ede3;
+  vertical-align: middle;
+}
+
+.productTable th {
+  background: #edf6eb;
+  color: #294c3b;
+  font-size: 13px;
+}
+
+.productTable td {
+  color: #53685a;
+  font-size: 13px;
+}
+
+.productTable tbody tr {
+  transition: background 0.2s ease;
+}
+
+.productTable tbody tr:hover {
+  background: #fffdf7;
+}
+
+.productImage {
+  width: 65px;
+  height: 55px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #e1eade;
+}
+
+/* Product Availability */
+.available,
+.unavailable {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.available {
+  background: #e1f3e7;
+  color: #286b42;
+}
+
+.unavailable {
+  background: #fff0ed;
+  color: #a13b2c;
+}
+
+/* Edit and Delete Actions */
+.actionButtons {
+  display: flex;
+  gap: 8px;
+}
+
+.editButton {
+  background: #e3f2e5;
+  color: #347653;
+  padding: 8px 12px;
+}
+
+.editButton:hover {
+  background: #cfe9d5;
+}
+
+.deleteButton {
+  background: #fff0ed;
+  color: #a13b2c;
+  padding: 8px 12px;
+}
+
+.deleteButton:hover {
+  background: #f8dcd5;
+}
+
+.statusText {
+  color: #708575;
+  padding: 20px 0;
+}
+
+/* Accessibility */
+.primaryButton:focus-visible,
+.secondaryButton:focus-visible,
+.editButton:focus-visible,
+.deleteButton:focus-visible {
+  outline: 2px solid #43866b;
+  outline-offset: 3px;
+}
+
+/* Responsive Layout */
+@media (max-width: 1024px) {
+  .mainContent {
+    padding: 24px;
+  }
+
+  .productForm {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainContent {
+    padding: 16px;
+  }
+
+  .pageHeader h1 {
+    font-size: 24px;
+  }
+
+  .formCard,
+  .listSection {
+    padding: 16px;
+  }
+
+  .productForm {
+    grid-template-columns: 1fr;
+  }
+
+  .fullWidth,
+  .formActions {
+    grid-column: 1 / -1;
+  }
+
+  .listHeader {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainContent {
+    padding: 12px;
+  }
+
+  .formCard,
+  .listSection {
+    padding: 12px;
+  }
+
+  .formActions {
+    flex-direction: column;
+  }
+
+  .formActions button {
+    width: 100%;
+  }
+}

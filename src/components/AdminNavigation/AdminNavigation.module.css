@@ -1,0 +1,328 @@
+
+/* Sidebar */
+.sidebar {
+  width: 260px;
+  min-width: 260px;
+  height: 100vh;
+  background: #fffaf0;
+  border-right: 1px solid #dce9dd;
+  display: flex;
+  flex-direction: column;
+  padding: 25px 18px;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  overflow-y: auto;
+  font-family: "Segoe UI", Arial, sans-serif;
+  z-index: 100;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 8px 25px;
+  border-bottom: 1px solid #dce9dd;
+}
+
+.logoIcon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #d8f1e5;
+  border-radius: 14px;
+  font-size: 27px;
+  flex-shrink: 0;
+}
+
+.logoText h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 750;
+  color: #347653;
+  letter-spacing: -0.5px;
+}
+
+.logoText span {
+  display: block;
+  margin-top: 4px;
+  color: #7b9182;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Administrator Information */
+.adminInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 10px;
+  margin: 20px 0 15px;
+  background: #eaf5e9;
+  border: 1px solid #d6ead8;
+  border-radius: 14px;
+}
+
+.avatar {
+  width: 43px;
+  height: 43px;
+  min-width: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #82c9a7, #43866b);
+  color: #ffffff;
+  font-size: 19px;
+  font-weight: 700;
+  border-radius: 50%;
+  box-shadow: 0 3px 8px rgba(67, 134, 107, 0.15);
+}
+
+.adminDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.adminDetails strong {
+  color: #30483d;
+  font-size: 14px;
+  font-weight: 650;
+  overflow-wrap: anywhere;
+}
+
+.adminDetails span {
+  color: #43866b;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Navigation Menu */
+.navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.sectionTitle {
+  margin: 0 0 10px;
+  padding: 0 12px;
+  color: #8b9b8d;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+}
+
+/* Navigation Links */
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 14px;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  border-radius: 11px;
+  text-decoration: none;
+  color: #53685a;
+  font-size: 14px;
+  font-weight: 550;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.icon {
+  width: 24px;
+  min-width: 24px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 19px;
+}
+
+.navItem:hover {
+  background: #e8f5eb;
+  color: #347653;
+  transform: translateX(3px);
+}
+
+.navItem.active {
+  background: linear-gradient(135deg, #82c9a7, #65b58e);
+  color: #183e2d;
+  border-color: #65b58e;
+  font-weight: 650;
+  box-shadow: 0 5px 12px rgba(67, 134, 107, 0.15);
+}
+
+.navItem.active:hover {
+  color: #183e2d;
+  background: linear-gradient(135deg, #73c19a, #55a980);
+}
+
+/* Bottom Actions */
+.bottomSection {
+  margin-top: auto;
+  padding-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-top: 1px solid #dce9dd;
+}
+
+.homeButton,
+.logoutButton {
+  width: 100%;
+  min-height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  padding: 12px 15px;
+  border-radius: 11px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.homeButton {
+  background: #ffffff;
+  border: 1px solid #dce9dd;
+  color: #53685a;
+}
+
+.homeButton:hover {
+  background: #e8f5eb;
+  border-color: #a8d9bd;
+  color: #347653;
+}
+
+.logoutButton {
+  background: #fdf0e8;
+  border: 1px solid #f0d9c8;
+  color: #9b5638;
+}
+
+.logoutButton:hover {
+  background: #9b5638;
+  border-color: #9b5638;
+  color: #ffffff;
+}
+
+/* Keyboard Accessibility */
+.navItem:focus-visible,
+.homeButton:focus-visible,
+.logoutButton:focus-visible {
+  outline: 3px solid #82c9a7;
+  outline-offset: 3px;
+}
+
+/* Scrollbar */
+.sidebar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #b8d9c2;
+  border-radius: 10px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 220px;
+    min-width: 220px;
+    padding: 20px 12px;
+  }
+
+  .logoText h2 {
+    font-size: 19px;
+  }
+
+  .adminInfo {
+    padding: 15px 8px;
+  }
+
+  .navItem {
+    gap: 10px;
+    padding: 11px 10px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 190px;
+    min-width: 190px;
+    padding: 16px 10px;
+  }
+
+  .logo {
+    gap: 8px;
+    padding: 0 3px 20px;
+  }
+
+  .logoIcon {
+    width: 38px;
+    height: 38px;
+    font-size: 22px;
+  }
+
+  .logoText h2 {
+    font-size: 17px;
+  }
+
+  .logoText span {
+    font-size: 11px;
+  }
+
+  .avatar {
+    width: 35px;
+    height: 35px;
+    min-width: 35px;
+    font-size: 16px;
+  }
+
+  .adminDetails strong {
+    font-size: 12px;
+  }
+
+  .adminDetails span {
+    font-size: 11px;
+  }
+
+  .navItem {
+    min-height: 44px;
+    font-size: 12px;
+    gap: 8px;
+    padding: 10px 8px;
+  }
+
+  .icon {
+    font-size: 17px;
+    width: 21px;
+    min-width: 21px;
+  }
+
+  .homeButton,
+  .logoutButton {
+    font-size: 12px;
+    padding: 10px;
+  }
+}

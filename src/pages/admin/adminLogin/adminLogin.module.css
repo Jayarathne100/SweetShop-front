@@ -1,0 +1,422 @@
+
+/* ========================================
+   SWEETSPOT ADMIN LOGIN
+   Theme: Mint Green & Cream
+======================================== */
+
+.container {
+  min-height: 100vh;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px 20px;
+
+  background: linear-gradient(
+    135deg,
+    #e5f2e5 0%,
+    #fffdf3 50%,
+    #f1f5e7 100%
+  );
+
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* ========================================
+   LOGIN CARD
+======================================== */
+
+.loginBox {
+  width: 100%;
+  max-width: 430px;
+  box-sizing: border-box;
+
+  padding: 42px;
+
+  background: #fffdf5;
+
+  border: 1px solid #dce9d8;
+  border-radius: 20px;
+
+  box-shadow:
+    0 20px 50px rgba(57, 91, 62, 0.10),
+    0 4px 12px rgba(57, 91, 62, 0.04);
+
+  text-align: center;
+
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+.loginBox:hover {
+  box-shadow:
+    0 24px 55px rgba(57, 91, 62, 0.13),
+    0 5px 15px rgba(57, 91, 62, 0.05);
+}
+
+/* ========================================
+   LOGO
+======================================== */
+
+.logo {
+  width: 72px;
+  height: 72px;
+
+  margin: 0 auto 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    145deg,
+    #e5f4e5,
+    #cde8d0
+  );
+
+  border: 1px solid #c7e1c8;
+  border-radius: 50%;
+
+  font-size: 32px;
+
+  box-shadow:
+    0 5px 15px rgba(78, 137, 88, 0.10);
+}
+
+/* ========================================
+   BRAND NAME
+======================================== */
+
+.loginBox h1 {
+  margin: 0;
+
+  color: #4b9561;
+
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+/* ========================================
+   PAGE HEADING
+======================================== */
+
+.loginBox h2 {
+  margin: 10px 0 8px;
+
+  color: #304a36;
+
+  font-size: 23px;
+  font-weight: 700;
+}
+
+/* ========================================
+   SUBTITLE
+======================================== */
+
+.subtitle {
+  margin: 0 0 28px;
+
+  color: #7b897c;
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* ========================================
+   ERROR MESSAGE
+======================================== */
+
+.error {
+  margin-bottom: 20px;
+  padding: 13px 15px;
+
+  background: #fff0ed;
+
+  border: 1px solid #efc8c0;
+  border-radius: 9px;
+
+  color: #a83d32;
+
+  font-size: 13px;
+  line-height: 1.6;
+
+  text-align: left;
+
+  overflow-wrap: anywhere;
+}
+
+/* ========================================
+   LOGIN FORM
+======================================== */
+
+.loginBox form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 19px;
+
+  text-align: left;
+}
+
+/* ========================================
+   INPUT GROUP
+======================================== */
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.inputGroup label {
+  color: #405444;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* ========================================
+   INPUT FIELDS
+======================================== */
+
+.inputGroup input {
+  width: 100%;
+  min-height: 47px;
+  box-sizing: border-box;
+
+  padding: 12px 14px;
+
+  border: 1px solid #d8e3d5;
+  border-radius: 9px;
+
+  outline: none;
+
+  background: #fffef9;
+  color: #304a36;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.inputGroup input::placeholder {
+  color: #a0aa9f;
+}
+
+.inputGroup input:hover {
+  border-color: #a9cdb0;
+}
+
+.inputGroup input:focus {
+  border-color: #73b886;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 3px rgba(115, 184, 134, 0.17);
+}
+
+/* ========================================
+   LOGIN BUTTON
+======================================== */
+
+.loginButton {
+  width: 100%;
+  min-height: 49px;
+
+  margin-top: 5px;
+  padding: 13px 18px;
+
+  border: 1px solid #72b486;
+  border-radius: 9px;
+
+  background: linear-gradient(
+    135deg,
+    #88c99a,
+    #65ad7b
+  );
+
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 5px 12px rgba(76, 145, 92, 0.15);
+
+  transition:
+    background 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.loginButton:hover:not(:disabled) {
+  background: linear-gradient(
+    135deg,
+    #6fb984,
+    #4e9866
+  );
+
+  box-shadow:
+    0 7px 16px rgba(76, 145, 92, 0.22);
+
+  transform: translateY(-2px);
+}
+
+.loginButton:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.loginButton:disabled {
+  background: #b9d8bd;
+  border-color: #b9d8bd;
+
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+/* ========================================
+   BACK BUTTON
+======================================== */
+
+.backButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 24px;
+  padding: 7px 10px;
+
+  border: none;
+  border-radius: 6px;
+
+  background: transparent;
+  color: #778579;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+.backButton:hover {
+  background: #edf5e9;
+  color: #438557;
+}
+
+.backButton:focus-visible,
+.loginButton:focus-visible {
+  outline: 3px solid rgba(77, 151, 96, 0.35);
+  outline-offset: 3px;
+}
+
+/* ========================================
+   TABLET RESPONSIVENESS
+======================================== */
+
+@media (max-width: 600px) {
+  .container {
+    min-height: 100vh;
+    padding: 28px 18px;
+  }
+
+  .loginBox {
+    max-width: 400px;
+    padding: 34px 25px;
+    border-radius: 16px;
+  }
+
+  .logo {
+    width: 62px;
+    height: 62px;
+    font-size: 28px;
+  }
+
+  .loginBox h1 {
+    font-size: 27px;
+  }
+
+  .loginBox h2 {
+    font-size: 21px;
+  }
+
+  .subtitle {
+    margin-bottom: 24px;
+    font-size: 13px;
+  }
+}
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 400px) {
+  .container {
+    padding: 20px 12px;
+  }
+
+  .loginBox {
+    padding: 29px 19px;
+    border-radius: 14px;
+  }
+
+  .logo {
+    width: 56px;
+    height: 56px;
+    font-size: 25px;
+  }
+
+  .loginBox h1 {
+    font-size: 25px;
+  }
+
+  .loginBox h2 {
+    font-size: 19px;
+  }
+
+  .inputGroup input {
+    min-height: 45px;
+    font-size: 13px;
+  }
+
+  .loginButton {
+    min-height: 46px;
+    font-size: 14px;
+  }
+}
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .loginBox,
+  .inputGroup input,
+  .loginButton,
+  .backButton {
+    transition: none;
+  }
+
+  .loginBox:hover,
+  .loginButton:hover {
+    transform: none;
+  }
+}
